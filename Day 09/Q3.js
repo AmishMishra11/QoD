@@ -2,12 +2,12 @@
 
 const getMostChar = (str) => {
   const temp = str.trim().split(" ").join("");
-  let newAr = temp.split("");
 
+  let newAr = temp.split("");
   const charArr = newAr.filter((item, index) => newAr.indexOf(item) === index);
 
   let max = -1;
-  let answser = {
+  let answer = {
     char: "",
     no: -1,
   };
@@ -19,13 +19,12 @@ const getMostChar = (str) => {
     }
 
     if (newMax > max) {
-      answser.char = char;
-      answser.no = newMax;
+      answer.char = char;
+      answer.no = newMax;
       max = newMax;
-      newMax = 0;
     }
   }
 
-  return answser;
+  return answer;
 };
 console.log(getMostChar("   hi im amish "));
